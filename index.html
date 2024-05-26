@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/profile.jpg">
+    <title>Rijas | Python Full Stack Developer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        header {
+            background: linear-gradient(45deg, #3747c4, #ca3ce6, #f50529, #2326cc, #9618bc);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            color: white;
+            padding: 1.5rem 0;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .container {
+            width: 100%;
+            max-width: 935px;
+            margin-top: 7rem;
+            padding: 0 1rem;
+        }
+        .bio {
+            text-align: center;
+            margin-bottom: 2rem;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .bio img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .bio h2 {
+            margin: 0.5rem 0;
+            font-size: 1.5rem;
+        }
+        .bio p {
+            margin: 0.5rem 0;
+            color: #777;
+        }
+        .portfolio {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .portfolio h2 {
+            border-bottom: 1px solid #dbdbdb;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            color: #cc2366;
+        }
+        .portfolio .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .portfolio .grid .item {
+            flex: 1 1 calc(33.333% - 1rem);
+            background-color: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+            transition: transform 0.2s;
+            animation: float 3s ease-in-out infinite;
+        }
+        .portfolio .grid .item:hover {
+            transform: scale(1.05);
+        }
+        .portfolio .grid .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
+        .portfolio .grid .item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #cc2366;
+        }
+        .contact {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact h2 {
+            border-bottom: 1px solid #dbdbdb;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            color: #cc2366;
+        }
+        .contact ul {
+            list-style: none;
+            padding: 0;
+        }
+        .contact ul li {
+            margin: 0.5rem 0;
+        }
+        .contact ul li a {
+            color: #3897f0;
+            text-decoration: none;
+        }
+        .contact ul li a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .portfolio .grid .item {
+                flex: 1 1 calc(50% - 1rem);
+            }
+        }
+        @media (max-width: 480px) {
+            .portfolio .grid .item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rijas - Python Full Stack Developer</h1>
+    </header>
+    <div class="container">
+        <section class="bio">
+            <img src="./images/profile.jpg" alt="Jack's profile picture">
+            <h2>About Me</h2>
+            <p>Hello! I'm Rijas, a passionate Python full stack developer with extensive experience in building robust and scalable web applications. I specialize in using modern frameworks and technologies to create efficient and user-friendly solutions. My goal is to continuously improve my skills and stay updated with the latest trends in web development.</p>
+        </section>
+        <section class="portfolio">
+            <h2 style="text-align: center;">My Projects</h2>
+            <div class="grid">
+                <div class="item">
+                    <a href="https://github.com/enelistra/e_commerce.git"><img src="./images/e-commerce.png" alt="Project 1"></a>
+                    <strong>E-commerce Platform :</strong> Developed a full-featured e-commerce platform using Django and SQLite Database.
+                </div>
+                <div class="item">
+                    <a href="https://github.com/enelistra/django_movieapp.git"><img src="./images/movieapp.png" alt="Project 2"></a>
+                    <strong> Movie Review App :</strong> Created a Movie Review Web app with Django and SQlite Database, featuring Movie Reviews and ratings.
+                </div>
+                <div class="item">
+                    <a href="https://github.com/enelistra/Flask.demo.git"><img src="./images/bookapp.png" alt="Project 4"></a>
+                    <strong>Books App :</strong>  Built a Books App using Flask.
+                </div>
+                <div class="item">
+                    <a href="https://github.com/enelistra/Malayalamvehicles.git"><img src="./images/Tata.png" alt="Project 5"></a>
+                    <strong>Malayalam Vehicles Demo website :</strong>  Built a demo Webpage fof Malayalm Vehicles authrized dealers of TATA motors , using Django framework and SQLite Database .
+                </div>
+                <div class="item">
+                    <a href="https://github.com/enelistra/DjangoTODO.git"> <img src="./images/todo.png" alt="Project 6"></a>
+                    <strong>Todo App :</strong>  Built a Todo App using Django Framework and SQLite Database, enabling users to make their work schedule ease.
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <h2 style="text-align: center;">Contact Me</h2>
+            <ul style="text-align: center;">
+                <li>Email: <a href="">kellykill64@gmail.com</a></li>
+                <li>Phone: <a href=""> +91 89218 91787 </a></li>
+                <li>Text Via Whatsapp: <a href="https://wa.me/918921891787">Whatsapp</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/jack-undefined-04a568305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin</a></li>
+                <li>GitHub: <a href="https://github.com/enelistra" target="_blank">github.com</a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
